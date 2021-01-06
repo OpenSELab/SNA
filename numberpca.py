@@ -41,7 +41,7 @@ if __name__ == '__main__':
                 # y_num_train = X_train["label"].values
                 x_COM_train = X_train[p_COM].values
 
-                x_train = X_train.drop(["defect", "label", "ID"], axis=1).values
+                x_train = X_train.drop(["defect", "label"], axis=1).values
 
                 # print(x_train.shape)
 
@@ -49,7 +49,7 @@ if __name__ == '__main__':
                 X_test = df.iloc[oob]
                 # y_test = X_test['defect'].values
                 # y_num_test = X_test["label"].values
-                x_test = X_test.drop(["defect", "label", "ID"], axis=1).values
+                x_test = X_test.drop(["defect", "label"], axis=1).values
                 x_COM_test = X_test[p_COM].values
 
                 # sumcode = X_test["CountLineCode"].sum()
